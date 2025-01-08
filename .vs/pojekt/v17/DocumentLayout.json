@@ -1,12 +1,135 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\ksiaz\\source\\repos\\pojekt\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FE9B0041-2518-4972-B44E-7340DDD1CF7A}|pojekt\\pojekt.csproj|c:\\users\\ksiaz\\source\\repos\\pojekt\\pojekt\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE9B0041-2518-4972-B44E-7340DDD1CF7A}|pojekt\\pojekt.csproj|solutionrelative:pojekt\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE9B0041-2518-4972-B44E-7340DDD1CF7A}|pojekt\\pojekt.csproj|c:\\users\\ksiaz\\source\\repos\\pojekt\\pojekt\\views\\user\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FE9B0041-2518-4972-B44E-7340DDD1CF7A}|pojekt\\pojekt.csproj|solutionrelative:pojekt\\views\\user\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE9B0041-2518-4972-B44E-7340DDD1CF7A}|pojekt\\pojekt.csproj|c:\\users\\ksiaz\\source\\repos\\pojekt\\pojekt\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE9B0041-2518-4972-B44E-7340DDD1CF7A}|pojekt\\pojekt.csproj|solutionrelative:pojekt\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE9B0041-2518-4972-B44E-7340DDD1CF7A}|pojekt\\pojekt.csproj|c:\\users\\ksiaz\\source\\repos\\pojekt\\pojekt\\views\\user\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FE9B0041-2518-4972-B44E-7340DDD1CF7A}|pojekt\\pojekt.csproj|solutionrelative:pojekt\\views\\user\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE9B0041-2518-4972-B44E-7340DDD1CF7A}|pojekt\\pojekt.csproj|c:\\users\\ksiaz\\source\\repos\\pojekt\\pojekt\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE9B0041-2518-4972-B44E-7340DDD1CF7A}|pojekt\\pojekt.csproj|solutionrelative:pojekt\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE9B0041-2518-4972-B44E-7340DDD1CF7A}|pojekt\\pojekt.csproj|c:\\users\\ksiaz\\source\\repos\\pojekt\\pojekt\\models\\warehousecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE9B0041-2518-4972-B44E-7340DDD1CF7A}|pojekt\\pojekt.csproj|solutionrelative:pojekt\\models\\warehousecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE9B0041-2518-4972-B44E-7340DDD1CF7A}|pojekt\\pojekt.csproj|c:\\users\\ksiaz\\source\\repos\\pojekt\\pojekt\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{FE9B0041-2518-4972-B44E-7340DDD1CF7A}|pojekt\\pojekt.csproj|solutionrelative:pojekt\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\ksiaz\\source\\repos\\pojekt\\pojekt\\Views\\User\\Register.cshtml",
+              "RelativeDocumentMoniker": "pojekt\\Views\\User\\Register.cshtml",
+              "ToolTip": "C:\\Users\\ksiaz\\source\\repos\\pojekt\\pojekt\\Views\\User\\Register.cshtml",
+              "RelativeToolTip": "pojekt\\Views\\User\\Register.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-08T14:48:39.965Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ksiaz\\source\\repos\\pojekt\\pojekt\\Views\\User\\Index.cshtml",
+              "RelativeDocumentMoniker": "pojekt\\Views\\User\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ksiaz\\source\\repos\\pojekt\\pojekt\\Views\\User\\Index.cshtml",
+              "RelativeToolTip": "pojekt\\Views\\User\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-08T14:48:05.869Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\ksiaz\\source\\repos\\pojekt\\pojekt\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "pojekt\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\ksiaz\\source\\repos\\pojekt\\pojekt\\Controllers\\UserController.cs",
+              "RelativeToolTip": "pojekt\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-08T14:11:30.716Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ksiaz\\source\\repos\\pojekt\\pojekt\\Program.cs",
+              "RelativeDocumentMoniker": "pojekt\\Program.cs",
+              "ToolTip": "C:\\Users\\ksiaz\\source\\repos\\pojekt\\pojekt\\Program.cs",
+              "RelativeToolTip": "pojekt\\Program.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-08T14:01:23.815Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\ksiaz\\source\\repos\\pojekt\\pojekt\\appsettings.json",
+              "RelativeDocumentMoniker": "pojekt\\appsettings.json",
+              "ToolTip": "C:\\Users\\ksiaz\\source\\repos\\pojekt\\pojekt\\appsettings.json",
+              "RelativeToolTip": "pojekt\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-01-08T13:56:48.139Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "WarehouseContext.cs",
+              "DocumentMoniker": "C:\\Users\\ksiaz\\source\\repos\\pojekt\\pojekt\\Models\\WarehouseContext.cs",
+              "RelativeDocumentMoniker": "pojekt\\Models\\WarehouseContext.cs",
+              "ToolTip": "C:\\Users\\ksiaz\\source\\repos\\pojekt\\pojekt\\Models\\WarehouseContext.cs",
+              "RelativeToolTip": "pojekt\\Models\\WarehouseContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-08T12:11:26.17Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserModel.cs",
+              "DocumentMoniker": "C:\\Users\\ksiaz\\source\\repos\\pojekt\\pojekt\\Models\\UserModel.cs",
+              "RelativeDocumentMoniker": "pojekt\\Models\\UserModel.cs",
+              "ToolTip": "C:\\Users\\ksiaz\\source\\repos\\pojekt\\pojekt\\Models\\UserModel.cs",
+              "RelativeToolTip": "pojekt\\Models\\UserModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-08T12:07:49.216Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

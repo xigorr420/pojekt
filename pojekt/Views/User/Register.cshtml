@@ -1,0 +1,26 @@
+﻿@model pojekt.Models.UserModel
+
+<h2>Register</h2>
+@if (TempData["Success"] != null)
+{
+    <p style="color: green;">@TempData["Success"]</p>
+}
+<form method="post" asp-action="Register">
+    <div>
+        <label>Name:</label>
+        <input asp-for="Name" />
+        <span asp-validation-for="Name"></span>
+    </div>
+    <div>
+        <label>Email:</label>
+        <input asp-for="Email" type="email" />
+        <span asp-validation-for="Email"></span>
+    </div>
+    <div>
+        <label>Password:</label>
+        <input asp-for="Password" type="password" />
+        <span asp-validation-for="Password"></span>
+    </div>
+    <input type="hidden" asp-for="Role" value="User" />
+    <button type="submit">Register</button>
+</form>
