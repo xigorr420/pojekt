@@ -35,11 +35,14 @@
                         else
                         {
                             <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Orders" asp-action="Index">Orders</a>
+                            </li>
+                            <li class="nav-item">
                                 <span class="nav-link text-dark">Hi, @ViewContext.HttpContext.Session.GetString("Username")!</span>
                             </li>
                             <li class="nav-item">
                                 <form asp-controller="User" asp-action="Logout" method="post" style="display:inline;">
-                                    <button type="submit" class="btn btn-link nav-link text-dark" style="padding: 0; border: none;">Logout</button>
+                                    <button type="submit" class="btn btn-link nav-link text-dark" style="padding:   0; border: none;">Logout</button>
                                 </form>
                             </li>
                         }

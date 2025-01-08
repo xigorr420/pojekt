@@ -1,8 +1,52 @@
-﻿@{
+﻿@model (string UserRole, List<pojekt.Models.ProductModel> Products)
+
+@{
     ViewData["Title"] = "Home Page";
 }
+<p>@Model.UserRole</p>
+<h1>Produkty</h1>
+<p>Rola użytkownika: @Model.UserRole</p>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nazwa</th>
+            <th>Opis</th>
+            <th>Kategoria</th>
+            <th>Cena</th>
+            <th>W Magazynie</th>
+            @if (Model.UserRole == "User")
+            {
+                <th>Ilość do zamówienia</th>
+                <th>Akcja</th>
+            }
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model.Products)
+        {
+            <tr>
+                <td>@product.Name</td>
+                <td>@product.Description</td>
+                <td>@product.Category</td>
+                <td>@product.Price</td>
+                <td>@product.Quantity</td>
+
+                @if (Model.UserRole == "User")
+                {
+                    <form asp-action="Order" method="post">
+                        <input type="hidden" name="productId" value="@product.ProductId" />
+                    <td>
+                        <input type="number" name="quantity" min="1" value="0" max="@product.Quantity" class="form-control" style="width: 80px;" />
+                    </td>
+                    <td>
+                        <button type="submit" class="btn btn-primary">Order</button>
+                    </td>
+                    </form>
+                }
+
+            </tr>
+        }
+    </tbody>
+</table>

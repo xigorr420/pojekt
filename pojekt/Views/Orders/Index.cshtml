@@ -1,0 +1,32 @@
+﻿@model List<pojekt.Models.OrderModel>
+
+<h1>Twoje Zamówienia</h1>
+
+@if (Model == null || !Model.Any())
+{
+    <p>Nie masz jeszcze żadnych zamówień.</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Produkt</th>
+                <th>Ilość</th>
+                <th>Cena całkowita</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var order in Model)
+            {
+                <tr>
+                    <td>@order.Product.Name</td>
+                    <td>@order.Quantity</td>
+                    <td>@order.TotalPrice.ToString("C")</td>
+                    <td>@order.Status</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
