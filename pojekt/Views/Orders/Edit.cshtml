@@ -1,0 +1,28 @@
+﻿@model  pojekt.Models.OrderModel
+
+<h2>Edytuj Zamówienie</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+    <div>
+        <label>Produkt</label>
+        <input asp-for="Product.Name" class="form-control" readonly />
+    </div>
+    <div>
+        <label>Ilość</label>
+        <input asp-for="Quantity" class="form-control" />
+    </div>
+    <div>
+        <label>Calkowita kwota:</label>
+        <input asp-for="TotalPrice" class="form-control" />
+    </div>
+    <div>
+        <label>Status</label>
+        <select asp-for="Status" class="form-control">
+            <option value="W trakcie realizacji">W trakcie realizacji</option>
+            <option value="Zrealizowane">Zrealizowane</option>
+            <option value="Anulowane">Anulowane</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-success">Zapisz</button>
+</form>

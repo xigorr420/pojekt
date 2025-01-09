@@ -20,7 +20,10 @@
                 <th>Ilość do zamówienia</th>
                 <th>Akcja</th>
             }
-            
+            @if (Model.UserRole == "Admin")
+            {
+                <th>Akcja</th>
+            }
         </tr>
     </thead>
     <tbody>
@@ -46,7 +49,25 @@
                     </form>
                 }
 
+                @if (Model.UserRole == "Admin")
+                {
+                    <td>
+                        <a href="@Url.Action("Edit", "Home", new { id = product.ProductId })" class="btn btn-warning">Edytuj</a>
+                        <form asp-action="Delete" method="post" style="display:inline-block;">
+                            <input type="hidden" name="productId" value="@product.ProductId" />
+                            <button type="submit" class="btn btn-danger" onclick="return confirm('Na pewno chcesz usunąć ten produkt?');">Usuń</button>
+                        </form>
+                    </td>
+                }
+
+                
             </tr>
+            
+        }
+
+        @if (Model.UserRole == "Admin")
+        {
+            <a href="@Url.Action("AddProduct", "Home")" class="btn btn-success mb-3">Dodaj produkt</a>
         }
     </tbody>
 </table>

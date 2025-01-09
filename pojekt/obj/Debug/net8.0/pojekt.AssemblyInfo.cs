@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("pojekt")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+33b92947329719833cf357bb94b8317d913599a9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+11c0de345c24a7430687cab175609aef05f44f3b")]
 [assembly: System.Reflection.AssemblyProductAttribute("pojekt")]
 [assembly: System.Reflection.AssemblyTitleAttribute("pojekt")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

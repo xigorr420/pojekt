@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 using pojekt.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace pojekt.Controllers
 {
@@ -42,6 +43,21 @@ namespace pojekt.Controllers
                     {
                         _context.Users.Add(user);
                         _context.SaveChanges();
+
+                        // Po zapisaniu użytkownika, dodaj dane do tabeli UserDetails
+                        var userDetails = new UserDetailsModel
+                        {
+                            UserId = user.ID, // Przypisanie UserId z nowo utworzonego użytkownika
+                            City = "Default", // Można ustawić domyślne wartości
+                            Street = "Default",
+                            HouseNumber = "Default",
+                            PhoneNumber = "Default"
+                        };
+
+                        // Dodanie danych użytkownika do tabeli UserDetails
+                        _context.UserDetails.Add(userDetails);
+                        _context.SaveChanges();
+
                         TempData["Success"] = "User registered successfully!";
                         return RedirectToAction("Index");
                     }
@@ -62,7 +78,7 @@ namespace pojekt.Controllers
                 Console.WriteLine(string.Join(", ", errors));
             }
 
-            return View(user);
+            return RedirectToAction("Index", "Home");
         }
 
         public IActionResult Login()
@@ -85,7 +101,7 @@ namespace pojekt.Controllers
                 return RedirectToAction("Index", "Home");
             }
             ModelState.AddModelError("", "Invalid username or password.");
-            return View(user);
+            return RedirectToAction("Index", "Home");
         }
 
         [HttpPost]
@@ -93,6 +109,65 @@ namespace pojekt.Controllers
         {
             HttpContext.Session.Clear(); // Usuwa wszystkie dane sesji
             return RedirectToAction("Index", "Home"); // Przekierowanie po wylogowaniu
+        }
+
+        public async Task<IActionResult> Update()
+        {
+            string userIdString = HttpContext.Session.GetString("UserId");
+            if (userIdString == null)
+            {
+                return RedirectToAction("Login", "User"); // Przekierowanie na stronę logowania
+            }
+
+            if (int.TryParse(userIdString, out int userId))
+            {
+                // Sprawdzanie, czy użytkownik już ma dane
+                var userDetails = await _context.UserDetails
+                    .FirstOrDefaultAsync(u => u.UserId == userId);
+
+                if (userDetails == null)
+                {
+                    // Jeśli użytkownik nie ma danych, wyświetl formularz do dodania danych
+                    return View(new UserDetailsModel { UserId = userId });
+                }
+
+                // Jeśli użytkownik ma dane, wyświetl formularz do edycji
+                return View(userDetails);
+            }
+
+            return RedirectToAction("Login", "User");
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Update(UserDetailsModel userDetails)
+        {
+            if (ModelState.IsValid)
+            {
+                var existingUserDetails = await _context.UserDetails
+                    .FirstOrDefaultAsync(u => u.UserId == userDetails.UserId);
+
+                if (existingUserDetails == null)
+                {
+                    return NotFound(); // Jeśli użytkownik nie istnieje
+                }
+
+                // Aktualizacja danych użytkownika
+                existingUserDetails.City = userDetails.City;
+                existingUserDetails.Street = userDetails.Street;
+                existingUserDetails.HouseNumber = userDetails.HouseNumber;
+                existingUserDetails.PhoneNumber = userDetails.PhoneNumber;
+
+                // Zapisz zmiany w bazie danych
+                _context.Update(existingUserDetails);
+                await _context.SaveChangesAsync();
+
+                // Przekierowanie na stronę z listą użytkowników lub inną stronę
+                return RedirectToAction("Index", "Home"); // Możesz zmienić na odpowiednią stronę
+            }
+
+            // Jeśli ModelState jest nieprawidłowy, zwróć ponownie formularz
+            return View(userDetails);
         }
     }
 }

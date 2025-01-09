@@ -158,8 +158,8 @@ Z:\_STUDIA\#Ksiazek\pojekt\pojekt\obj\Debug\net8.0\pojekt.genruntimeconfig.cache
 Z:\_STUDIA\#Ksiazek\pojekt\pojekt\obj\Debug\net8.0\ref\pojekt.dll
 C:\Users\ksiaz\source\repos\pojekt\pojekt\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\ksiaz\source\repos\pojekt\pojekt\bin\Debug\net8.0\appsettings.json
-C:\Users\ksiaz\source\repos\pojekt\pojekt\bin\Debug\net8.0\pojekt.staticwebassets.runtime.json
 C:\Users\ksiaz\source\repos\pojekt\pojekt\bin\Debug\net8.0\pojekt.staticwebassets.endpoints.json
+C:\Users\ksiaz\source\repos\pojekt\pojekt\bin\Debug\net8.0\pojekt.staticwebassets.runtime.json
 C:\Users\ksiaz\source\repos\pojekt\pojekt\bin\Debug\net8.0\pojekt.exe
 C:\Users\ksiaz\source\repos\pojekt\pojekt\bin\Debug\net8.0\pojekt.deps.json
 C:\Users\ksiaz\source\repos\pojekt\pojekt\bin\Debug\net8.0\pojekt.runtimeconfig.json

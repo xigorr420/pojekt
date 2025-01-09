@@ -17,7 +17,6 @@ builder.Services.AddSession();
 
 var app = builder.Build();
 
-// Initialize the database
 using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
@@ -25,22 +24,43 @@ using (var scope = app.Services.CreateScope())
 
     context.Database.EnsureCreated();
 
+    // Przywrócenie u¿ytkowników (Admin i User)
     if (!context.Users.Any())
     {
         context.Users.Add(new UserModel { Name = "Admin", Email = "admin@example.com", Password = "admin123", Role = "Admin" });
         context.Users.Add(new UserModel { Name = "User", Email = "user@example.com", Password = "user123", Role = "User" });
         context.SaveChanges();
     }
-    if (!context.Products.Any())
+
+    // Przywrócenie produktów
+    if (!context.Products.Any(p => p.Name == "M³otek"))
     {
         context.Products.Add(new ProductModel { Name = "M³otek", Description = "M³otek stalowy z gumow¹ r¹czk¹", Category = "Narzêdzia", Quantity = "50", Price = 35.50m });
-        context.Products.Add(new ProductModel { Name = "Wiertarka", Description = "Wiertarka elektryczna 500W", Category = "Narzêdzia", Quantity = "30", Price = 249.99m });
-        context.Products.Add(new ProductModel { Name = "Farba Akrylowa", Description = "Farba akrylowa do wnêtrz, 5L", Category = "Farby", Quantity = "100", Price = 89.99m });
-        context.Products.Add(new ProductModel { Name = "Klej do p³ytek", Description = "Klej do p³ytek ceramicznych 25kg", Category = "Materia³y budowlane", Quantity = "200", Price = 59.99m });
-        context.Products.Add(new ProductModel { Name = "P³yta Gipsowo-Kartonowa", Description = "P³yta gipsowo-kartonowa, 120x240cm", Category = "Materia³y budowlane", Quantity = "150", Price = 35.00m });
-        context.SaveChanges();
     }
 
+    if (!context.Products.Any(p => p.Name == "Wiertarka"))
+    {
+        context.Products.Add(new ProductModel { Name = "Wiertarka", Description = "Wiertarka elektryczna 500W", Category = "Narzêdzia", Quantity = "30", Price = 249.99m });
+    }
+
+    if (!context.Products.Any(p => p.Name == "Farba Akrylowa"))
+    {
+        context.Products.Add(new ProductModel { Name = "Farba Akrylowa", Description = "Farba akrylowa do wnêtrz, 5L", Category = "Farby", Quantity = "100", Price = 89.99m });
+    }
+
+    if (!context.Products.Any(p => p.Name == "Klej do p³ytek"))
+    {
+        context.Products.Add(new ProductModel { Name = "Klej do p³ytek", Description = "Klej do p³ytek ceramicznych 25kg", Category = "Materia³y budowlane", Quantity = "200", Price = 59.99m });
+    }
+
+    if (!context.Products.Any(p => p.Name == "P³yta Gipsowo-Kartonowa"))
+    {
+        context.Products.Add(new ProductModel { Name = "P³yta Gipsowo-Kartonowa", Description = "P³yta gipsowo-kartonowa, 120x240cm", Category = "Materia³y budowlane", Quantity = "150", Price = 35.00m });
+    }
+
+    context.SaveChanges();
+
+    // Przywrócenie zamówieñ
     if (!context.Orders.Any())
     {
         var user = context.Users.First(u => u.Email == "user@example.com");
@@ -67,6 +87,8 @@ using (var scope = app.Services.CreateScope())
 
         context.SaveChanges();
     }
+
+    // Przywrócenie szczegó³ów u¿ytkowników
     if (!context.UserDetails.Any())
     {
         var user = context.Users.First(u => u.Email == "user@example.com");
@@ -80,7 +102,17 @@ using (var scope = app.Services.CreateScope())
         });
         context.SaveChanges();
     }
-
+    if(!context.UserDetails.Any(u=>u.UserId== 1)){
+        context.UserDetails.Add(new UserDetailsModel
+        {
+            UserId = 1,
+            PhoneNumber = "123-456-789",
+            City = "Krakow",
+            Street = "Kwiatowa",
+            HouseNumber = "123"
+        });
+        context.SaveChanges();
+    }
 
 }
 

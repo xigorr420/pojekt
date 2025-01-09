@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\ksiaz\\source\\repos\\pojekt\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{FE9B0041-2518-4972-B44E-7340DDD1CF7A}|pojekt\\pojekt.csproj|c:\\users\\ksiaz\\source\\repos\\pojekt\\pojekt\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE9B0041-2518-4972-B44E-7340DDD1CF7A}|pojekt\\pojekt.csproj|solutionrelative:pojekt\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FE9B0041-2518-4972-B44E-7340DDD1CF7A}|pojekt\\pojekt.csproj|c:\\users\\ksiaz\\source\\repos\\pojekt\\pojekt\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FE9B0041-2518-4972-B44E-7340DDD1CF7A}|pojekt\\pojekt.csproj|solutionrelative:pojekt\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FE9B0041-2518-4972-B44E-7340DDD1CF7A}|pojekt\\pojekt.csproj|c:\\users\\ksiaz\\source\\repos\\pojekt\\pojekt\\views\\user\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{FE9B0041-2518-4972-B44E-7340DDD1CF7A}|pojekt\\pojekt.csproj|solutionrelative:pojekt\\views\\user\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE9B0041-2518-4972-B44E-7340DDD1CF7A}|pojekt\\pojekt.csproj|c:\\users\\ksiaz\\source\\repos\\pojekt\\pojekt\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FE9B0041-2518-4972-B44E-7340DDD1CF7A}|pojekt\\pojekt.csproj|solutionrelative:pojekt\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FE9B0041-2518-4972-B44E-7340DDD1CF7A}|pojekt\\pojekt.csproj|c:\\users\\ksiaz\\source\\repos\\pojekt\\pojekt\\views\\user\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -38,11 +38,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Register.cshtml",
               "DocumentMoniker": "C:\\Users\\ksiaz\\source\\repos\\pojekt\\pojekt\\Views\\User\\Register.cshtml",
               "RelativeDocumentMoniker": "pojekt\\Views\\User\\Register.cshtml",
@@ -78,15 +78,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\ksiaz\\source\\repos\\pojekt\\pojekt\\Program.cs",
               "RelativeDocumentMoniker": "pojekt\\Program.cs",
               "ToolTip": "C:\\Users\\ksiaz\\source\\repos\\pojekt\\pojekt\\Program.cs",
               "RelativeToolTip": "pojekt\\Program.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAB0AAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-08T14:01:23.815Z"
+              "WhenOpened": "2025-01-08T14:01:23.815Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -114,7 +115,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "UserModel.cs",
               "DocumentMoniker": "C:\\Users\\ksiaz\\source\\repos\\pojekt\\pojekt\\Models\\UserModel.cs",
               "RelativeDocumentMoniker": "pojekt\\Models\\UserModel.cs",

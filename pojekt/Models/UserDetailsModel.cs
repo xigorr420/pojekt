@@ -11,6 +11,6 @@ namespace pojekt.Models
         public string Street { get; set; }
         public string HouseNumber { get; set; }
 
-        public UserModel User { get; set; }
+        public UserModel? User { get; set; }
     }
 }

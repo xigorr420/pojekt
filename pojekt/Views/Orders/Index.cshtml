@@ -1,8 +1,8 @@
-﻿@model List<pojekt.Models.OrderModel>
+﻿@model (string userRole, List<pojekt.Models.OrderModel> orders)
 
 <h1>Twoje Zamówienia</h1>
 
-@if (Model == null || !Model.Any())
+@if (Model.orders == null || !Model.orders.Any())
 {
     <p>Nie masz jeszcze żadnych zamówień.</p>
 }
@@ -15,16 +15,33 @@ else
                 <th>Ilość</th>
                 <th>Cena całkowita</th>
                 <th>Status</th>
+                <th>Akcje</th>
             </tr>
         </thead>
         <tbody>
-            @foreach (var order in Model)
+            @foreach (var order in Model.orders)
             {
                 <tr>
                     <td>@order.Product.Name</td>
                     <td>@order.Quantity</td>
                     <td>@order.TotalPrice.ToString("C")</td>
                     <td>@order.Status</td>
+                    <td>
+                        @if (order.Status != "Anulowane")
+                        {
+                            @if (Model.userRole == "Admin")
+                            {
+                                <a href="@Url.Action("Edit", "Orders", new { id = order.Id })" class="btn btn-warning">Edytuj</a>
+                            }
+                            else if (Model.userRole == "User")
+                            {
+                                <form asp-action="Cancel" method="post" style="display:inline-block;">
+                                    <input type="hidden" name="id" value="@order.Id" />
+                                    <button type="submit" class="btn btn-danger" onclick="return confirm('Czy na pewno chcesz anulować zamówienie?');">Anuluj</button>
+                                </form>
+                            }
+                        }
+                    </td>
                 </tr>
             }
         </tbody>

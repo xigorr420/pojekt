@@ -6,12 +6,22 @@ namespace pojekt.Models
     {
         [Key]
         public int ProductId { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public string Category { get; set; }
-        public string Quantity { get; set; }
-        public decimal Price {  get; set; }
 
-        public ICollection<OrderModel> Orders { get; set; }
+        [Required]
+        public string Name { get; set; }
+
+        public string Description { get; set; }
+
+        [Required]
+        public string Category { get; set; }
+
+        [Required]
+        public string Quantity { get; set; } // Trzymane jako string, ale sprawdzane w walidacji
+
+        [Required]
+        [Range(0.01, double.MaxValue)]
+        public decimal Price { get; set; }
+        public ICollection<OrderModel>? Orders { get; set; }
     }
+
 }

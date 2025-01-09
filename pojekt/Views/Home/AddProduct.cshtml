@@ -1,0 +1,44 @@
+﻿@model pojekt.Models.ProductModel
+
+<h2>Dodaj produkt</h2>
+
+<form asp-action="AddProduct" method="post">
+    <div>
+        <label for="Name">Nazwa</label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div>
+        <label for="Description">Opis</label>
+        <textarea asp-for="Description" class="form-control"></textarea>
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+    <div>
+        <label for="Category">Kategoria</label>
+        <input asp-for="Category" class="form-control" />
+        <span asp-validation-for="Category" class="text-danger"></span>
+    </div>
+    <div>
+        <label for="Quantity">Ilość</label>
+        <input asp-for="Quantity" class="form-control" />
+        <span asp-validation-for="Quantity" class="text-danger"></span>
+    </div>
+    <div>
+        <label for="Price">Cena</label>
+        <input asp-for="Price" class="form-control" />
+        <span asp-validation-for="Price" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-success">Dodaj produkt</button>
+</form>
+@section Scripts {
+    <script>
+        document.querySelector('form').addEventListener('submit', function (event) {
+            const validationSummary = document.querySelectorAll('.text-danger');
+            validationSummary.forEach(error => {
+                if (error.innerText.trim() !== "") {
+                    console.error(`Błąd walidacji: ${error.innerText}`);
+                }
+            });
+        });
+    </script>
+}
